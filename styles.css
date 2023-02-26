@@ -3,20 +3,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 70rem;
 }
 
 .sketch-screen {
-  height: 40rem;
-  width: 40rem;
+  height: 30rem;
+  width: 30rem;
 }
 
 #sketch-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50rem;
-  width: 50rem;
+  height: 40rem;
+  width: 40rem;
   background-color: rgb(219, 46, 46);
   border-radius: 1rem;
 }
