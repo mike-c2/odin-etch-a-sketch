@@ -18,13 +18,9 @@ function darkenSquare() {
     opacity += 0.1;
   }
   
-  if(opacity > 1) {
-    opacity = 1;
-  }
-  
   this.style.opacity = opacity.toString();
   
-  if(opacity === 1) {
+  if(opacity >= 1) {
     this.removeEventListener('mouseover', darkenSquare);
   }
 }
