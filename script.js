@@ -3,13 +3,34 @@ function createSquare(squareHeight, squareWidth) {
   square.style.height = squareHeight + 'px';
   square.style.width = squareWidth + 'px';
   square.style.backgroundColor = '#000000';
-  square.style.opacity = '0.5';
+  square.style.opacity = '0';
   square.style.borderColor = 'red';
   square.style.borderStyle = 'solid';
   square.style.borderWidth = '1px';
   square.style.boxSizing = 'border-box';
   
+  square.addEventListener('mouseover', darkenSquare);
+  
   return square;
+}
+
+function darkenSquare() {
+  console.log('event fired');
+  let opacity = Number(this.style.opacity);
+  
+  if(opacity < 1) {
+    opacity += 0.1;
+  }
+  
+  if(opacity > 1) {
+    opacity = 1;
+  }
+  
+  this.style.opacity = opacity.toString();
+  
+  if(opacity === 1) {
+    this.removeEventListener('mouseover', darkenSquare);
+  }
 }
 
 function createGrid(gridHeight, gridWidth, numberOfRows, numberOfColumns) {
