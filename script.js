@@ -45,11 +45,18 @@ function createGrid(gridHeight, gridWidth, numberOfRows, numberOfColumns) {
   return grid;
 }
 
-const sketchContainer = document.getElementById('sketch-container');
+function createSketchScreen(numberOfRows, numberOfColumns) {
+  const sketchContainer = document.getElementById('sketch-container');
 
-const sketchScreen = document.createElement('div');
-sketchScreen.classList.add('sketch-screen');
-sketchContainer.appendChild(sketchScreen);
+  const sketchScreen = document.createElement('div');
+  sketchScreen.classList.add('sketch-screen');
+  sketchContainer.appendChild(sketchScreen);
+  
+  height = sketchScreen.offsetHeight;
+  width = sketchScreen.offsetWidth;
 
-const grid = createGrid(sketchScreen.offsetHeight, sketchScreen.offsetWidth, 10, 10);
-sketchScreen.appendChild(grid);
+  const grid = createGrid(height, width, numberOfRows, numberOfColumns);
+  sketchScreen.appendChild(grid);
+}
+
+createSketchScreen(100, 100)
