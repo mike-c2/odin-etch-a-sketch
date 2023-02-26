@@ -25,16 +25,26 @@ function darkenSquare() {
   }
 }
 
-function createGrid(gridHeight, gridWidth, numberOfRows, numberOfColumns) {
+function createGrid(numberOfRows, numberOfColumns) {
+  const sketchContainer = document.getElementById('sketch-container');
+
+  const sketchScreen = document.createElement('div');
+  sketchScreen.classList.add('sketch-screen');
+  sketchContainer.appendChild(sketchScreen);
+  
+  height = sketchScreen.offsetHeight;
+  width = sketchScreen.offsetWidth;
+
   const grid = document.createElement('div');
-  grid.style.height = gridHeight + 'px';
-  grid.style.width = gridWidth + 'px';
+  grid.style.height = height + 'px';
+  grid.style.width = width + 'px';
   grid.style.backgroundColor = '#ffffff';
   grid.style.boxSizing = 'border-box';
   grid.style.display = 'grid';
+  sketchScreen.appendChild(grid);
 
-  const squareHeight = Math.floor(gridHeight / numberOfRows);
-  const squareWidth = Math.floor(gridWidth / numberOfColumns);
+  const squareHeight = Math.floor(height / numberOfRows);
+  const squareWidth = Math.floor(width / numberOfColumns);
 
   grid.style.gridTemplateColumns = `repeat(${numberOfColumns}, 1fr)`;
 
@@ -45,18 +55,4 @@ function createGrid(gridHeight, gridWidth, numberOfRows, numberOfColumns) {
   return grid;
 }
 
-function createSketchScreen(numberOfRows, numberOfColumns) {
-  const sketchContainer = document.getElementById('sketch-container');
-
-  const sketchScreen = document.createElement('div');
-  sketchScreen.classList.add('sketch-screen');
-  sketchContainer.appendChild(sketchScreen);
-  
-  height = sketchScreen.offsetHeight;
-  width = sketchScreen.offsetWidth;
-
-  const grid = createGrid(height, width, numberOfRows, numberOfColumns);
-  sketchScreen.appendChild(grid);
-}
-
-createSketchScreen(100, 100)
+createGrid(100, 100);
