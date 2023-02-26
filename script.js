@@ -4,9 +4,6 @@ function createSquare(squareHeight, squareWidth) {
   square.style.width = squareWidth + 'px';
   square.style.backgroundColor = '#000000';
   square.style.opacity = '0';
-  square.style.borderColor = 'red';
-  square.style.borderStyle = 'solid';
-  square.style.borderWidth = '1px';
   square.style.boxSizing = 'border-box';
   
   square.addEventListener('mouseover', darkenSquare);
@@ -15,7 +12,6 @@ function createSquare(squareHeight, squareWidth) {
 }
 
 function darkenSquare() {
-  console.log('event fired');
   let opacity = Number(this.style.opacity);
   
   if(opacity < 1) {
