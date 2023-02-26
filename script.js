@@ -49,8 +49,6 @@ const sketchContainer = document.getElementById('sketch-container');
 
 const sketchScreen = document.createElement('div');
 sketchScreen.classList.add('sketch-screen');
-sketchScreen.style.height = '40rem';
-sketchScreen.style.width = '40rem';
 sketchContainer.appendChild(sketchScreen);
 
 const grid = createGrid(sketchScreen.offsetHeight, sketchScreen.offsetWidth, 10, 10);
