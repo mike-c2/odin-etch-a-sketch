@@ -34,7 +34,7 @@ function createGrid(numberOfRows, numberOfColumns) {
   const grid = document.createElement('div');
   grid.style.height = height + 'px';
   grid.style.width = width + 'px';
-  grid.style.backgroundColor = '#ffffff';
+  grid.style.backgroundColor = 'silver';
   grid.style.boxSizing = 'border-box';
   grid.style.display = 'grid';
   sketchScreen.appendChild(grid);
