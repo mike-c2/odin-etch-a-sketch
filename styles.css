@@ -22,6 +22,17 @@ body {
   border-radius: 1rem;
 }
 
+#sketch-top p {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: gold;
+  padding: 0;
+  margin: 0;
+}
+
 #sketch-bottom {
   display: flex;
   justify-content: space-between;
