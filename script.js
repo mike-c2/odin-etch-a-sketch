@@ -26,11 +26,7 @@ function darkenSquare() {
 }
 
 function createGrid(numberOfRows, numberOfColumns) {
-  const sketchContainer = document.getElementById('sketch-container');
-
-  const sketchScreen = document.createElement('div');
-  sketchScreen.classList.add('sketch-screen');
-  sketchContainer.appendChild(sketchScreen);
+  const sketchScreen = document.getElementById('sketch-screen');
   
   height = sketchScreen.offsetHeight;
   width = sketchScreen.offsetWidth;

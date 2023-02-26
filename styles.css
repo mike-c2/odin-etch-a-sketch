@@ -6,7 +6,7 @@ body {
   height: 70rem;
 }
 
-.sketch-screen {
+#sketch-screen {
   height: 30rem;
   width: 30rem;
 }
