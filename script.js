@@ -2,9 +2,11 @@ function createSquare(squareHeight, squareWidth) {
   const square = document.createElement('div');
   square.style.height = squareHeight + 'px';
   square.style.width = squareWidth + 'px';
-  square.style.backgroundColor = 'blue';
+  square.style.backgroundColor = '#000000';
+  square.style.opacity = '0.5';
   square.style.borderColor = 'red';
   square.style.borderStyle = 'solid';
+  square.style.borderWidth = '1px';
   square.style.boxSizing = 'border-box';
   
   return square;
@@ -14,6 +16,7 @@ function createGrid(gridHeight, gridWidth, numberOfRows, numberOfColumns) {
   const grid = document.createElement('div');
   grid.style.height = gridHeight + 'px';
   grid.style.width = gridWidth + 'px';
+  grid.style.backgroundColor = '#ffffff';
   grid.style.boxSizing = 'border-box';
   grid.style.display = 'grid';
   
