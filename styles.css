@@ -13,10 +13,26 @@ body {
 
 #sketch-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   height: 40rem;
   width: 40rem;
   background-color: rgb(219, 46, 46);
   border-radius: 1rem;
+}
+
+#sketch-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  width: 35rem;
+}
+
+.knob {
+  box-sizing: border-box;
+  padding: 2.5em;
+  border-radius: 3em;
+  border-style: solid;
 }
