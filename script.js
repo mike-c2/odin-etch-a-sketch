@@ -36,7 +36,7 @@ function createGrid(gridHeight, gridWidth, numberOfRows, numberOfColumns) {
   const squareHeight = Math.floor(gridHeight / numberOfRows);
   const squareWidth = Math.floor(gridWidth / numberOfColumns);
 
-  grid.style.gridTemplateColumns = `repeat(${numberOfColumns}, ${squareWidth + 'px'})`;
+  grid.style.gridTemplateColumns = `repeat(${numberOfColumns}, 1fr)`;
 
   for(let i = 0; i < numberOfRows * numberOfColumns; i++) {
     grid.appendChild(createSquare(squareHeight, squareWidth));
