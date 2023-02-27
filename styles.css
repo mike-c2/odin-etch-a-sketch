@@ -19,6 +19,14 @@ body {
   margin: 0.5em;
 }
 
+#change-button:hover,
+#clear-button:hover {
+  cursor: pointer;
+  color: red;
+  background-color: black;
+  transition: color 0.4s, background-color 0.4s
+}
+
 #sketch-screen {
   height: 30rem;
   width: 30rem;
