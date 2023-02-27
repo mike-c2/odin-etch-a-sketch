@@ -98,4 +98,4 @@ function setButtonEventListeners() {
 }
 
 setButtonEventListeners();
-createGrid(10, 10);
+clearSketchScreen();
