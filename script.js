@@ -59,13 +59,13 @@ function promptForSquaresPerSide() {
   let promptMessage = 'Enter the number of squares per side that the drawing';
   promptMessage += ' area will use.  The drawing area size will stay the same,';
   promptMessage += ' so the higher the square number, the smaller the squares';
-  promptMessage += ' will be.  This must be a number of at least 1 and no';
+  promptMessage += ' will be.  This must be an integer of at least 1 and no';
   promptMessage += ' more than 100.'
 
-  let answer = prompt(promptMessage);
+  let answer = prompt(promptMessage).trim();
   
-  while(isNaN(answer) || answer < 1 || answer > 100) {
-    answer = prompt(`${answer} is not valid. ${promptMessage}`)
+  while(isNaN(answer) || answer < 1 || answer > 100 || Math.floor(answer) != answer) {
+    answer = prompt(`${answer} is not valid. ${promptMessage}`).trim();
   }
   
   return Number(answer);
