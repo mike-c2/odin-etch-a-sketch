@@ -7,12 +7,27 @@ body {
   height: 50rem;
 }
 
+header {
+  display: flex;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0.7em;
+  padding: 0;
+}
+
+header p,
+#change-button,
+#clear-button {
+  font-family: 'Comic Neue', cursive;
+}
+
 #change-button,
 #clear-button {
   color: black;
-  background-color: red;
   font-size: 1.5rem;
-  font-family: 'Comic Neue', cursive;
+  background-color: red;
   border-style: none;
   border-radius: 0.3rem;
   padding: 0.5em;
