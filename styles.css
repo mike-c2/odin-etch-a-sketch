@@ -1,9 +1,21 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 70rem;
+  height: 50rem;
+}
+
+#change-button,
+#clear-button {
+  color: black;
+  background-color: red;
+  font-size: 1.5rem;
+  font-family: 'Comic Neue', cursive;
+  border-style: none;
+  border-radius: 0.3rem;
+  padding: 0.5em;
+  margin: 0.5em;
 }
 
 #sketch-screen {
